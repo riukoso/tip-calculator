@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monaco, monospace;
+}
+
+section{
+    min-height: 100vh;
+    display: grid;
+    background-color: #c5e4e7;
+    grid-template-rows: 30vh auto;
+    justify-items: center;
+}
+
+section > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    gap: 25px;
+    min-width: 60vw;
+    max-width: 950px;
+    height: 50vh;
+    margin: 0 20px;
+}
+
+section > img{
+    margin-bottom: 50px;
+    align-self: flex-end;
+}
+
+.settings{
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.settings > div > label{
+    display: inline-block;
+    margin-bottom: 10px;
+} 
+
+.settings > div > p{
+    margin-bottom: 15px;
+} 
+
+.bill-input, .people-input{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+    background-color: #f3f8fb;
+    border: 2px solid #f3f8fb;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+input[type="number"]{
+    border: none;
+    outline: none;
+    text-align: end;
+    background-color: transparent;
+    height: 2rem;
+    color: #01464b;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+input[type="radio"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.percent{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    max-width: 100%;
+}
+
+.percent label{
+    color: #fffe;
+    background-color: #01464b;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#customLabel{
+    background-color: #f3f8fb;
+    color: #01464b99;
+    text-align: center;
+}
+
+#custom2{
+    margin: auto auto;
+    color: #01464b;
+    width: 100%;
+    font-size: 1.2rem;
+    height: auto;
+}
+
+#custom2Label{
+    border-radius: 10px;
+    background-color: #f3f8fb;
+    text-align: end;
+    padding: 10px 10px;
+}
+
+.labelChecked{
+    background-color: #25c2ad!important;
+    color: #01464b!important;
+}
+
+.total{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    background-color: #01464b;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.total div{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 10px 0;
+}
+
+.total div > p{
+    align-self: center;
+}
+
+.total div div{
+    justify-self: flex-end;
+}
+
+.total div div img{
+    height: 1.6rem;
+    margin: 3px;
+    align-self: center;
+    filter: invert(55%) sepia(55%) saturate(664%) hue-rotate(122deg) brightness(100%) contrast(95%);
+}
+
+.total p{
+    color: white;
+}
+
+.total p span{
+    color: #ccc9;
+    font-size: .7rem;
+    word-spacing: 5px;
+}
+
+#tipPerson, #totalPerson{
+    color: #25c2ad;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+button{
+    outline: none;
+    border: none;
+    align-self: flex-end;
+    padding: .7rem 0;
+    border-radius: 5px;
+    background-color: #25c2ad;
+    color: #01464b;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media (max-width:750px) {
+    section{
+        grid-template-rows: auto auto;
+    }
+    section > img{
+        margin: 20px;
+    }
+    section > div{
+        grid-template-columns: 1fr;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}

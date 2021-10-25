@@ -4,54 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js" defer></script>
+    <title>Tip Calculator</title>
 </head>
 <body>
     <section>
        <img src="./assets/logo.svg" alt="Logo"> 
        <div>
            <div class="settings">
-                <label for="bill">Bill</label>
-                <div>
-                    <img src="./assets/icon-dollar.svg" alt="">
-                    <input id='bill' type="number"/>
-                </div>
-
-                <input id="tip05" type="radio" value="0.05" name="tip" checked>
-                <label for="tip05">5%</label>
-                <input id="tip10" type="radio" value="0.10" name="tip">
-                <label for="tip10">10%</label>
-                <input id="tip15" type="radio" value="0.15" name="tip">
-                <label for="tip15">15%</label>
-                <input id="tip25" type="radio" value="0.25" name="tip">
-                <label for="tip25">25%</label>
-                <input id="tip50" type="radio" value="0.50" name="tip">
-                <label for="tip50">50%</label>
-                <input id="custom" type="radio" value="" name="tip">
-                <label for="custom">Custom</label>
-
-                <label for="people">Number of people</label>
-                <div>
-                    <img src="./assets/icon-person.svg" alt="">
-                    <input id='people' type="number"/>
-                </div>
+               <div>
+                   <label for="bill">Bill</label>
+                   <div class="bill-input">
+                       <img src="./assets/icon-dollar.svg" alt="">
+                       <input id='bill' type="number"/>
+                   </div>
+               </div>
+               <div>
+                   <p>Select tip %</p>
+                   <div class="percent">
+                       <label class="labelChecked" for="tip05"><input id="tip05" type="radio" value="0.05" name="tip" checked>5%</label>
+                       <label for="tip10"><input id="tip10" type="radio" value="0.10" name="tip">10%</label>
+                       <label for="tip15"><input id="tip15" type="radio" value="0.15" name="tip">15%</label>
+                       <label for="tip25"><input id="tip25" type="radio" value="0.25" name="tip">25%</label>
+                       <label for="tip50"><input id="tip50" type="radio" value="0.50" name="tip">50%</label>
+                       <label id="customLabel" for="custom"><input id="custom" type="radio" value="" name="tip">Custom</label>
+                        <div id="custom2Label" hidden=true>
+                            <input id="custom2" type="number" size="1" onkeyup="keyUpCustom()" >
+                        </div>
+                   </div>
+               </div>
+               <div>
+                   <label for="people">Number of people</label>
+                   <div class="people-input">
+                       <img src="./assets/icon-person.svg" alt="">
+                       <input id='people' type="number"/>
+                   </div>
+               </div>
             </div>
            <div class="total">
                 <div>
-                    <p>Tip Amount<br><span>/person</span></p>
+                    <p>Tip Amount<br><span>/ person</span></p>
                     <div>
                         <img src="./assets/icon-dollar.svg" alt="">
-                        <p id="tipPerson">5.76</p>
+                        <p id="tipPerson">0.00</p>
                     </div>
                 </div>
                 <div>
-                    <p>Total<br><span>/person</span></p>
+                    <p>Total<br><span>/ person</span></p>
                     <div>
                         <img src="./assets/icon-dollar.svg" alt="">
-                        <p id="totalPerson">54.53</p>
+                        <p id="totalPerson">0.00</p>
                     </div>
                 </div>
-                <button>reset</button> 
+                <button onclick="reset()">reset</button> 
            </div>
        </div>
     </section>
